@@ -20,9 +20,9 @@ return require('packer').startup(function()
   --use 'sainnhe/edge'
   --use 'sainnhe/everforest'
   --use 'tanvirtin/monokai.nvim'
-  use 'sainnhe/sonokai'
+  --use 'sainnhe/sonokai'
   --use 'tomasiser/vim-code-dark' 
-  --use 'sainnhe/gruvbox-material'
+  use 'sainnhe/gruvbox-material'
   -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
@@ -94,11 +94,14 @@ return require('packer').startup(function()
   use 'simrat39/symbols-outline.nvim'
 
   -- test
-  use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+  -- use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
 
   -- lsp progressbar
   use 'j-hui/fidget.nvim'
 
   -- rust-tools
   use 'simrat39/rust-tools.nvim'
+
+  -- neotest
+  use { "nvim-neotest/neotest", requires = {"nvim-lua/plenary.nvim","nvim-treesitter/nvim-treesitter","antoinemadec/FixCursorHold.nvim","nvim-neotest/neotest-go"}}
 end)

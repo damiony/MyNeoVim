@@ -127,12 +127,24 @@ vim.api.nvim_set_keymap('n', '<space>o', ':SymbolsOutline<CR>', opts)
 --                Ultest               --
 --                                     --
 --*************************************--
-vim.api.nvim_set_keymap('n', '<space>us', '<cmd>UltestSummary!<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>uc', '<cmd>UltestSummaryClose<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>ut', '<cmd>Ultest<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>un', '<cmd>UltestNearest<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>ud', '<cmd>UltestDebugNearest<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>uo', '<cmd>UltestOutput<CR>', opts)
+--vim.api.nvim_set_keymap('n', '<space>us', '<cmd>UltestSummary!<CR>', opts)
+--vim.api.nvim_set_keymap('n', '<space>uc', '<cmd>UltestSummaryClose<CR>', opts)
+--vim.api.nvim_set_keymap('n', '<space>ut', '<cmd>Ultest<CR>', opts)
+--vim.api.nvim_set_keymap('n', '<space>un', '<cmd>UltestNearest<CR>', opts)
+--vim.api.nvim_set_keymap('n', '<space>ud', '<cmd>UltestDebugNearest<CR>', opts)
+--vim.api.nvim_set_keymap('n', '<space>uo', '<cmd>UltestOutput<CR>', opts)
+
+
+
+--*************************************--
+--                                     --
+--               neotest               --
+--                                     --
+--*************************************--
+vim.api.nvim_set_keymap('n', '<space>nn', ':lua require("neotest").run.run()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>nc', ':lua require("neotest").run.run(vim.fn.expand("%"))<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>nd', ':lua require("neotest").run.run({strategy = "dap"})<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>ns', ':lua require("neotest").summary.toggle()<CR>', opts)
 
 
 

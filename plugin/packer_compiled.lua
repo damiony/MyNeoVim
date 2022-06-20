@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
   ["bufdelete.nvim"] = {
     loaded = true,
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/bufdelete.nvim",
@@ -119,6 +124,11 @@ _G.packer_plugins = {
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["gruvbox-material"] = {
+    loaded = true,
+    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -133,6 +143,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  neotest = {
+    loaded = true,
+    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/neotest",
+    url = "https://github.com/nvim-neotest/neotest"
+  },
+  ["neotest-go"] = {
+    loaded = true,
+    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/neotest-go",
+    url = "https://github.com/nvim-neotest/neotest-go"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -204,11 +224,6 @@ _G.packer_plugins = {
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
-  sonokai = {
-    loaded = true,
-    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/sonokai",
-    url = "https://github.com/sainnhe/sonokai"
-  },
   ["symbols-outline.nvim"] = {
     loaded = true,
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
@@ -233,16 +248,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["vim-test"] = {
-    loaded = true,
-    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/vim-test",
-    url = "https://github.com/vim-test/vim-test"
-  },
-  ["vim-ultest"] = {
-    loaded = true,
-    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/vim-ultest",
-    url = "https://github.com/rcarriga/vim-ultest"
   },
   ["vim-vsnip"] = {
     loaded = true,
