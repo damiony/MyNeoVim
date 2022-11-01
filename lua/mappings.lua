@@ -4,6 +4,8 @@ vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeFindFileToggle<CR>', opts)
 vim.api.nvim_set_keymap('i', '<C-q>', '<esc>', opts)
 vim.api.nvim_set_keymap('i', '<C-a>', '<esc>ggvG', opts)
 vim.api.nvim_set_keymap('n', '<C-a>', '<esc>ggvG', opts)
+-- +y进行系统粘贴，用于macos系统
+vim.api.nvim_set_keymap('v', '+y', ':w !pbcopy<CR><CR>', opts)
 
 
 --*******************************--

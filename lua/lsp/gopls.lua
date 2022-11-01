@@ -37,6 +37,6 @@ end
 
 vim.cmd([[
   autocmd BufWritePre *.go lua OrgImports(1000)
-  autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
+  autocmd BufWritePre *.go lua vim.lsp.buf.format({async = false})
 ]])
 

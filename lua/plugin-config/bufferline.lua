@@ -12,10 +12,14 @@ bufferline.setup {
     right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
     left_mouse_command = "buffer %d",    -- can be a string | function, see "Mouse actions"
     middle_mouse_command = nil,          -- can be a string | function, see "Mouse actions"
+    indicator = {
+        icon = '▎', -- this should be omitted if indicator style is not 'icon'
+        -- style = 'icon' | 'underline' | 'none',
+        style = 'icon',
+    },
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
-    indicator_icon = '▎',
     buffer_close_icon = '',
     modified_icon = '●',
     close_icon = '',
@@ -61,7 +65,7 @@ bufferline.setup {
       end
     end,
     --offsets = {{filetype = "NvimTree", text = "File Explorer" | function , text_align = "left" | "center" | "right"}},
-    offsets = {{filetype = "NvimTree", text = "File Explorer" , text_align = "center"}},
+    offsets = {{filetype = "NvimTree", text = "File Explorer" , text_align = "center", separator = true}},
     --color_icons = true | false, -- whether or not to add the filetype icon highlights
     color_icons = true,
     --show_buffer_icons = true | false, -- disable filetype icons for buffers
@@ -74,6 +78,8 @@ bufferline.setup {
     show_close_icon = true,
     --show_tab_indicators = true | false,
     show_tab_indicators = true,
+    --show_duplicate_prefix = true | false, -- whether to show duplicate buffer prefix
+    show_duplicate_prefix = true, -- whether to show duplicate buffer prefix
     persist_buffer_sort = true,
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
@@ -83,6 +89,11 @@ bufferline.setup {
     enforce_regular_tabs = false,
     --always_show_bufferline = true | false,
     always_show_bufferline = true,
+    hover = {
+        enabled = true,
+        delay = 200,
+        reveal = {'close'}
+    },
     --sort_by = 'insert_after_current' |'insert_at_end' | 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
     --  -- add custom logic
     --  return buffer_a.modified > buffer_b.modified
