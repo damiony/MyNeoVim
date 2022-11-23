@@ -6,6 +6,7 @@ lualine.setup {
     --theme = 'nord',
     --theme = 'everforest',
     theme = 'material',
+    --theme = 'tokyonight',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
