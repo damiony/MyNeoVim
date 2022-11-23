@@ -2,7 +2,7 @@ local dap = require('dap')
 -- 配置lldb调试器
 dap.adapters.lldb = {
   type = 'executable',
-  command = '/usr/local/Cellar/llvm/13.0.1_1/bin/lldb-vscode', -- adjust as needed
+  command = '/usr/local/Cellar/llvm/15.0.3/bin/lldb-vscode', -- adjust as needed
   name = "lldb"
 }
 

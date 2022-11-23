@@ -8,7 +8,7 @@ vim.o.sidescrolloff = 8
 -- 行号
 vim.o.number = true
 -- 高亮所在行
-vim.o.cursorline = true
+-- vim.o.cursorline = true
 -- 高亮所在列
 -- vim.o.cursorcolumn = true
 -- 显示左侧图标指示列
@@ -43,8 +43,3 @@ vim.o.completeopt = "menu,menuone,noselect,noinsert"
 vim.g.background_transparency = false
 -- 映射leader
 vim.g.mapleader = ";"
-
--- 保存时自动格式化rust文件 暂时无效 不知道为什么
--- vim.g.rustfmt_autosave = true 
--- rust格式化命令的参数
--- vim.g.rustfmt_options = 'overwrite'

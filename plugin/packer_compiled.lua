@@ -129,11 +129,6 @@ _G.packer_plugins = {
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gruvbox-material"] = {
-    loaded = true,
-    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/gruvbox-material",
-    url = "https://github.com/sainnhe/gruvbox-material"
-  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -159,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/neotest-go",
     url = "https://github.com/nvim-neotest/neotest-go"
   },
+  ["neotest-rust"] = {
+    loaded = true,
+    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/neotest-rust",
+    url = "https://github.com/rouge8/neotest-rust"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -173,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-go"] = {
+    loaded = true,
+    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
+    url = "https://github.com/leoluz/nvim-dap-go"
   },
   ["nvim-dap-ui"] = {
     loaded = true,
@@ -253,6 +258,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/damion/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/damion/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-vsnip"] = {
     loaded = true,

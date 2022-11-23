@@ -1,10 +1,10 @@
-
 local opts = { noremap=true, silent=true }
+
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeFindFileToggle<CR>', opts)
 vim.api.nvim_set_keymap('i', '<C-q>', '<esc>', opts)
 vim.api.nvim_set_keymap('i', '<C-a>', '<esc>ggvG', opts)
 vim.api.nvim_set_keymap('n', '<C-a>', '<esc>ggvG', opts)
--- +y进行系统粘贴，用于macos系统
+-- +y进行系统粘贴，实用于macos系统
 vim.api.nvim_set_keymap('v', '+y', ':w !pbcopy<CR><CR>', opts)
 
 
@@ -49,7 +49,7 @@ vim.api.nvim_set_keymap('n', ']e', ':Lspsaga diagnostic_jump_prev<CR>', opts)
 vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', opts)
 vim.api.nvim_set_keymap('n', '<C-g>', '<cmd>Telescope live_grep<cr>', opts)
 vim.api.nvim_set_keymap('n', '<C-l>', '<cmd>Telescope grep_string<cr>', opts)
-vim.api.nvim_set_keymap('n', '<space>h', '<cmd>Telescope help_tags<cr>', opts)
+vim.api.nvim_set_keymap('n', '<C-h>', '<cmd>Telescope help_tags<cr>', opts)
 --vim.api.nvim_set_keymap('n', '<C-b>', '<cmd>Telescope buffers<cr>', opts)
 
 vim.api.nvim_set_keymap('n', "gd", "<cmd>Telescope lsp_definitions theme=dropdown<CR>", opts)
@@ -69,8 +69,8 @@ vim.api.nvim_set_keymap('n', "gt", "<cmd>Telescope lsp_type_definitions theme=dr
 --**********************************--
 
 vim.api.nvim_set_keymap('n', '<F5>', '<cmd>lua require"dap".continue()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<F6>', '<cmd>lua require"dap".step_into()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<F7>', '<cmd>lua require"dap".step_over()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<F6>', '<cmd>lua require"dap".step_over()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<F7>', '<cmd>lua require"dap".step_into()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<F8>', '<cmd>lua require"dap".step_out()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<F9>', '<cmd>lua require"dap".run_last()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<F10>', '<cmd>lua require"dap".terminate()<CR>', opts)
@@ -84,15 +84,15 @@ vim.api.nvim_set_keymap('n', '<space>bc', '<cmd>lua require"dap".clear_breakpoin
 --           Bufferline             --
 --                                  --
 --**********************************--
-vim.api.nvim_set_keymap('n', '<C-1>', ':BufferLineGoToBuffer 1<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-2>', ':BufferLineGoToBuffer 2<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-3>', ':BufferLineGoToBuffer 3<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-4>', ':BufferLineGoToBuffer 4<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-5>', ':BufferLineGoToBuffer 5<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-6>', ':BufferLineGoToBuffer 6<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-7>', ':BufferLineGoToBuffer 7<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-8>', ':BufferLineGoToBuffer 8<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-9>', ':BufferLineGoToBuffer 9<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>1', ':BufferLineGoToBuffer 1<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>2', ':BufferLineGoToBuffer 2<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>3', ':BufferLineGoToBuffer 3<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>4', ':BufferLineGoToBuffer 4<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>5', ':BufferLineGoToBuffer 5<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>6', ':BufferLineGoToBuffer 6<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>7', ':BufferLineGoToBuffer 7<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>8', ':BufferLineGoToBuffer 8<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>9', ':BufferLineGoToBuffer 9<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>b]', ':BufferLineCycleNext<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>b[', ':BufferLineCyclePrev<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>bd', ':bdelete!<CR>', opts)
@@ -155,6 +155,19 @@ vim.api.nvim_set_keymap('n', '<space>ns', ':lua require("neotest").summary.toggl
 --               rust-tools            --
 --                                     --
 --*************************************--
-vim.api.nvim_set_keymap('n', '<space>rr', ':RustRunnables<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>ra', ':RustHoverActions<CR>:RustHoverActions<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>rd', ':RustDebuggables<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>rr', ':RustRunnables<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>ra', ':RustHoverActions<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>rd', ':RustDebuggables<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>rj', ':RustMoveItemDown<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>rk', ':RustMoveItemUp<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>ro', ':RustOpenCargo<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>rp', ':RustParentModule<CR>', opts)
+
+
+--*************************************--
+--                                     --
+--              nvim-dap-go            --
+--                                     --
+--*************************************--
+vim.api.nvim_set_keymap('n', '<leader>g', ':lua require("dap-go").debug_test()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>gl', ':lua require("dap-go").debug_last_test()<CR>', opts)

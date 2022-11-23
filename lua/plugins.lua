@@ -22,7 +22,10 @@ return require('packer').startup(function()
   --use 'tanvirtin/monokai.nvim'
   --use 'sainnhe/sonokai'
   --use 'tomasiser/vim-code-dark' 
-  use 'sainnhe/gruvbox-material'
+  --use 'sainnhe/gruvbox-material'
+  --use 'folke/tokyonight.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
+
   -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
@@ -100,8 +103,23 @@ return require('packer').startup(function()
   use 'j-hui/fidget.nvim'
 
   -- rust-tools
-  use 'simrat39/rust-tools.nvim'
+  use  {
+    'simrat39/rust-tools.nvim',
+  }
 
   -- neotest
-  use { "nvim-neotest/neotest", requires = {"nvim-lua/plenary.nvim","nvim-treesitter/nvim-treesitter","antoinemadec/FixCursorHold.nvim","nvim-neotest/neotest-go"}}
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-neotest/neotest-go",
+      --"nvim-neotest/neotest-plenary",
+      "rouge8/neotest-rust",
+    }
+  }
+
+  -- nvim-dap-go
+  use 'leoluz/nvim-dap-go'
 end)

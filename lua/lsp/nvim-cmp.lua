@@ -18,6 +18,10 @@ cmp.setup {
       -- require'snippy'.expand_snippet(args.body)
     end,
   },
+  window = {
+     completion = cmp.config.window.bordered(),
+     documentation = cmp.config.window.bordered(),
+  },
   mapping = {
     ["<C-p>"] = cmp.mapping.select_prev_item(),
     ["<C-n>"] = cmp.mapping.select_next_item(),
@@ -56,13 +60,14 @@ cmp.setup {
     -- { name = 'snippy' },
     -- tabnine
     { name = 'cmp_tabnine' },
-  }, { { name = 'uffer' },
+  }, { { name = 'buffer' },
        { name = 'path' }
     }),
 }
 
 -- Use buffer source for `/`.
 cmp.setup.cmdline('/', {
+  mapping = cmp.mapping.preset.cmdline(),
   sources = {
     { name = 'buffer' }
   }
@@ -70,6 +75,7 @@ cmp.setup.cmdline('/', {
 
 -- Use cmdline & path source for ':'.
 cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
     { name = 'path' }
   }, {
