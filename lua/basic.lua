@@ -40,6 +40,7 @@ vim.o.splitright = true
 -- 自动补全不自动选中
 vim.o.completeopt = "menu,menuone,noselect,noinsert"
 -- 透明背景
-vim.g.background_transparency = false
+vim.g.background_transparency = true
+--vim.g.background_transparency = false
 -- 映射leader
 vim.g.mapleader = ";"

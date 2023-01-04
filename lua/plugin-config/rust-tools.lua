@@ -161,7 +161,7 @@ local opts = {
 	dap = {
 		adapter = {
 			type = "executable",
-			command = '/usr/local/Cellar/llvm/15.0.3/bin/lldb-vscode',
+			command = '/usr/local/opt/llvm/bin/lldb-vscode',
 			name = "rt_lldb",
 		},
 	},

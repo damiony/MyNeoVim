@@ -8,23 +8,20 @@ return require('packer').startup(function()
     requires = 'kyazdani42/nvim-web-devicons'
   }
 
-  -- scheme
+  -- colorscheme
   --use 'tjdevries/colorbuddy.vim'
   --use 'Th3Whit3Wolf/onebuddy'
   --use 'Th3Whit3Wolf/one-nvim'
   --use "rebelot/kanagawa.nvim"
-  --use({
-  --	"catppuccin/nvim",
-	--  as = "catppuccin"
-  --})
   --use 'sainnhe/edge'
   --use 'sainnhe/everforest'
   --use 'tanvirtin/monokai.nvim'
   --use 'sainnhe/sonokai'
   --use 'tomasiser/vim-code-dark' 
   --use 'sainnhe/gruvbox-material'
-  --use 'folke/tokyonight.nvim'
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'folke/tokyonight.nvim'
+  --use { "catppuccin/nvim", as = "catppuccin" }
+  --use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
 
   -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

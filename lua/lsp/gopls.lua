@@ -35,7 +35,8 @@ OrgImports = function(wait_ms)
   end
 end
 
-vim.cmd([[
+vim.cmd([[ 
+  autocmd FileType  go set tabstop=4
   autocmd BufWritePre *.go lua OrgImports(1000)
   autocmd BufWritePre *.go lua vim.lsp.buf.format({async = false})
 ]])

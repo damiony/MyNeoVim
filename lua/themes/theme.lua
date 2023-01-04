@@ -18,3 +18,4 @@
 --require('themes/one-buddy')
 --require('themes/one-nvim')
 require('themes/tokyonight')
+--require('themes/oxocarbon')

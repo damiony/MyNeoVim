@@ -2,8 +2,8 @@ local opts = { noremap=true, silent=true }
 
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeFindFileToggle<CR>', opts)
 vim.api.nvim_set_keymap('i', '<C-q>', '<esc>', opts)
-vim.api.nvim_set_keymap('i', '<C-a>', '<esc>ggvG', opts)
-vim.api.nvim_set_keymap('n', '<C-a>', '<esc>ggvG', opts)
+-- vim.api.nvim_set_keymap('i', '<C-a>', '<esc>ggvG', opts)
+-- vim.api.nvim_set_keymap('n', '<C-a>', '<esc>ggvG', opts)
 -- +y进行系统粘贴，实用于macos系统
 vim.api.nvim_set_keymap('v', '+y', ':w !pbcopy<CR><CR>', opts)
 
@@ -143,10 +143,12 @@ vim.api.nvim_set_keymap('n', '<space>o', ':SymbolsOutline<CR>', opts)
 --               neotest               --
 --                                     --
 --*************************************--
-vim.api.nvim_set_keymap('n', '<space>nn', ':lua require("neotest").run.run()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>nc', ':lua require("neotest").run.run(vim.fn.expand("%"))<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>nr', ':lua require("neotest").run.run()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>nf', ':lua require("neotest").run.run(vim.fn.expand("%"))<CR>', opts)
 vim.api.nvim_set_keymap('n', '<space>nd', ':lua require("neotest").run.run({strategy = "dap"})<CR>', opts)
 vim.api.nvim_set_keymap('n', '<space>ns', ':lua require("neotest").summary.toggle()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>no', ':lua require("neotest").output.open({ enter = false })<CR>', opts)
+
 
 
 
